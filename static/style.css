@@ -1,0 +1,23 @@
+body{
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #4a90e2;
+}
+
+.entry{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0,1);
+}
+
+a{
+    color: #4a90e2;
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css/">
+</head>
+<body>
+    <h1>✏️ Edit Entry</h1>
+    <form method="POST">
+        <label for="">Title:</label>
+        <input type="text" name="title" value="{{ entry.title }}" required><br><br>
+
+        <label for="">Mood:</label>
+        <select name="mood" id="">
+            <option value="😊"{% if entry.mood == '😊'%}selected{% endif %}>Happy</option>
+            <option value="😢"{% if entry.mood == '😢'%}selected{% endif %}>Sad</option>
+            <option value="😠"{% if entry.mood == '😠'%}selected{% endif %}>Angry</option>
+            <option value="😴"{% if entry.mood == '😴'%}selected{% endif %}>Tired</option>
+        </select><br><br>
+
+        <label for="">Entry:</label><br>
+        <textarea name="content" rows="5" required>{{ entry.content }}</textarea><br><br>
+
+        <button type="submit">Update</button>
+    </form>
+    <br>
+    <a href="/">🔙 Back</a>
+</body>
+</html>

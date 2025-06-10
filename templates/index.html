@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'style.css') }}">
+</head>
+<body>
+    <h1>📘 My Personal Diary</h1>
+    <a href="/add">➕ Add New Entry</a>
+    {% for date in sorted_dates %}
+        <h2>{{ date }}</h2>
+        {% for entry in entries_by_date[date] %}
+            <div class="entry">
+                <h3>{{ entry.title }} {{ entry.mood }}</h3>
+                <small>{{ entry.time }}</small>
+                <p>{{ entry.content }}</p>
+                <a href="/edit/{{ entry.id }}">✏️ Edit</a> 
+                <a href="/delete/{{ entry.id }}" onclick="return confirm('Delete this entry?')">❌</a>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'add.css') }}">
+</head>
+<body>
+    <h1>✍🏽 New Diary Entry</h1>
+    <form method="POST" action="">
+        <label for="">Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label for="">Mood:</label><br>
+        <select name="mood" >
+            <option value="😊">Happy</option>
+            <option value="😢">Sad</option>
+            <option value="😠">Angry</option>
+            <option value="😴">Tired</option>
+        </select><br><br>
+
+        <label for="">Entry:</label><br>
+        <textarea name="content" rows="5" required></textarea>
+
+        <button type="submit">Save</button>
+    </form>
+    <br>
+    <a href="/">🔙 Go Back</a>
+</body>
+</html>
