@@ -1,5 +1,7 @@
 # 🌐 My Flask Web App
 
+✅ **Live site:** [https://daily-diary-bzwl.onrender.com/](https://daily-diary-bzwl.onrender.com/)
+
 A clean and simple Flask web application deployed on [Render](https://render.com). Easily customizable and ready for production.
 
 ---
